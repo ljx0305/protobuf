@@ -422,6 +422,9 @@ struct PrivateAccess {
       const ::google::protobuf::internal::ClassData* class_data) {
     return T::InternalGenerateParseTable_(class_data);
   }
+
+  template <typename T>
+  using ImplTForTesting = typename T::Impl_;
 };
 
 }  // namespace internal
